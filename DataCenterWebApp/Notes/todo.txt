@@ -1,0 +1,19 @@
+﻿ViewModelCache
+	Add a singleton object containing a cache of the view models needed by the angular client
+	Add a background thread that keeps the cache up to date with a periodic polling of the iC Data Center service.
+	Have the controllers return data from the cache
+	Add some status information to the list of all planned experiments so the client can indicate if the list
+		is out date, or when it was last updated.
+Client
+	Monitor service - emits update if system status or list of planned experiemnts has changed.
+		Add a service like the counter service that emits the system status summary instead of a counter.
+		Maybe add a similar service that emits a signal when its list of planned experiments has been updated.
+	Components can use thia service to drive the status portions of their displays.
+	Add a filter that filters the list of experiments based upon a string.
+	Add a search page that filters the list of planned experiments.
+
+
+Idea - the headerbar subscribes to the LiveMonitor service.  The LiveMonitor service polls the LiveMonitor Controller for a system summary type object.  
+	If the latest change date for the list of planned experiments has changed, then the LiveMonitor service polls the LiveMonitor service for the list
+	of planned experiments.  Ther LiveMonitor service has the public members for the list of planned experiments and system summary, which all other
+	displays can use.  (This will allow search and filtering to be performed.)

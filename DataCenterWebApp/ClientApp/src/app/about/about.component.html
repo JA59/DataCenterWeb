@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+    <h2>{{title}}</h2>
+  </div>
+
+  <nav class="navbar navbar-default navbar-static-top" style="margin-top: 15px;">
+    <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li [ngClass]="{'active': slideNumber == 0}"><a (click)="showSlide(0)" >Background</a></li>
+      <li [ngClass]="{'active': slideNumber == 1}"><a (click)="showSlide(1)" >Overview</a></li>
+      <li [ngClass]="{'active': slideNumber == 2}"><a (click)="showSlide(2)" >Tools</a></li>
+      <li [ngClass]="{'active': slideNumber == 3}"><a (click)="showSlide(3)" >Hello world</a></li>
+      <li [ngClass]="{'active': slideNumber == 4}"><a (click)="showSlide(4)" >Beyond</a></li>
+      <li [ngClass]="{'active': slideNumber == 5}"><a (click)="showSlide(5)" >Stepstone</a></li>
+      <li [ngClass]="{'active': slideNumber == 6}"><a (click)="showSlide(6)" >Arcitecture</a></li>
+      <li [ngClass]="{'active': slideNumber == 7}"><a (click)="showSlide(7)" >Links</a></li>
+    </ul>
+    </div>
+  </nav>
+
+
+
+  <div style="margin-top: 15px; margin-left: 30px;">
+    <div *ngIf="this.slideNumber == 0" >
+      <slide-introduction></slide-introduction>
+    </div>
+    <div *ngIf="this.slideNumber == 1">
+      <slide-overview></slide-overview>
+    </div>
+    <div *ngIf="this.slideNumber == 2">
+      <slide2></slide2>
+    </div>
+    <div *ngIf="this.slideNumber == 3">
+      <slide3></slide3>
+    </div>
+    <div *ngIf="this.slideNumber == 4">
+      <slide4></slide4>
+    </div>
+    <div *ngIf="this.slideNumber == 5">
+      <slide5></slide5>
+    </div>
+    <div *ngIf="this.slideNumber == 6">
+      <slide6></slide6>
+    </div>
+    <div *ngIf="this.slideNumber == 7">
+      <slide7></slide7>
+    </div>
+  </div>
+</div>
+
+
+

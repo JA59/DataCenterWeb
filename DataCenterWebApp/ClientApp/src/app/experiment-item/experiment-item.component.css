@@ -1,0 +1,21 @@
+@media (max-width: 767px) {
+  /* On small screens, dont waste space at top of the screen */
+
+  h4 {
+    margin-top: 3px;
+  }
+}
+
+h4 {
+  text-align: center;
+}
+
+.plannedexperiment {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+  .plannedexperiment * {
+    vertical-align: middle;
+  }
+

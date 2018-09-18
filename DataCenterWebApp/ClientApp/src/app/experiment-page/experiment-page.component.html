@@ -1,0 +1,81 @@
+<div class="container-fluid" >
+  <div *ngIf="status == StatusEnum.StatusNoFilteredData || status == StatusEnum.StatusGood">
+      <div class="row" >
+        <div class="searchcontainer">
+          <span class="icon"><i class="glyphicon glyphicon-search"></i></span>
+          <input [(ngModel)]="searchText" id="searchbox" placeholder="Search..." (ngModelChange)="onSearchTextChange($event)">
+        </div>
+      </div>
+  </div>
+  <div *ngIf="status == StatusEnum.StatusUnauthorized">
+      <h4>Unauthorized Access</h4>
+      <p>You are not authorized to view experiments</p>
+      <p>The "user" or "admin" role is required to view planned experiments</p>
+      <a (click)="goLogOn()" style="cursor: pointer;" >Click here to log on</a>
+  </div>
+  <div *ngIf="status == StatusEnum.StatusOffine">
+      <h4>No Data Available</h4>
+      <p>iC Data Center is currently unavailable.</p>
+  </div>
+  <div *ngIf="status == StatusEnum.StatusNoFilteredData">
+    <div class="row nomatches">No experiments exist that match your search pattern.</div>
+  </div>
+  <div *ngIf="status == StatusEnum.StatusNoData">
+      <h4>No Data Available</h4>
+      <p>No planned experiments exist within iC Data Center.</p>
+  </div>
+
+  <div *ngIf="status == StatusEnum.StatusGood">
+    <div class="row">
+      <p>Matching {{plannedexperimentspage.RowCount}} of {{plannedexperimentspage.UnfilteredRowCount}} ELN experiments.</p>
+    </div>
+
+    <button *ngIf="auth.isAdmin" class="btn btn-primary" [disabled]="selectedCount == maxSelectedCount" (click)="setSelectionAll(true)">Select all</button>
+    <button *ngIf="auth.isAdmin" class="btn btn-primary" [disabled]="selectedCount == 0" (click)="setSelectionAll(false)">Clear all</button>
+    <button *ngIf="auth.isAdmin && selectedCount != 0" class="btn btn-danger" (click)="onDelete()">Delete selected experiments</button>
+
+    <table class="table experimenttable table-hover">
+      <thead>
+        <tr>
+          <th *ngIf="auth.isAdmin">Delete</th>
+          <th class="experimenttable">Name</th>
+          <th class="hidden-xs">User</th>
+          <th class="hidden-xs hidden-sm" >Project</th>
+          <th>Created</th>
+          <th class="hidden-xs hidden-sm hidden-md" >Process</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let plannedexperiment of plannedexperimentspage.Results">
+          <td *ngIf="auth.isAdmin" ><input type="checkbox" [checked]="plannedexperiment.Selected" (change)="onSelected(plannedexperiment)" />&nbsp;</td>
+          <td><a (click)="onSelect(plannedexperiment)" style="cursor: pointer;" data-toggle="tooltip" title="Click to view experiment details"><div [innerHTML]="plannedexperiment.ExperimentName  | highlighter : searchText" ></div></a></td>
+          <td class="hidden-xs"><div [innerHTML]="plannedexperiment.User  | highlighter : searchText"></div></td>
+          <td class="hidden-xs hidden-sm"><div [innerHTML]="plannedexperiment.Project  | highlighter : searchText"></div></td>
+          <td><span>{{ plannedexperiment.CreatedTime | date:'MM/dd/yyyy hh:mm' }}</span></td>
+          <td class="hidden-xs hidden-sm hidden-md"><div [innerHTML]="plannedexperiment.ProcessType  | highlighter : searchText"></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination active pagination-sm" style="margin: 4px">
+          <li>
+            <a (click)="requestPage(1)">&lt;&lt;</a>
+          </li>
+          <li *ngFor="let page of pageSet" [ngClass]="{active:plannedexperimentspage.CurrentPage == page}" >
+            <a (click)="requestPage(page)">{{page}}</a>
+          </li>
+          <li>
+            <a (click)="requestPage(plannedexperimentspage.PageCount)">&gt;&gt;</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

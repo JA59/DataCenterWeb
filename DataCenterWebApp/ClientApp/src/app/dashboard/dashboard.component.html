@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="row">
+      <h2>Dashboard</h2>
+  </div>
+
+  <div id="largeview" class="row hidden-md hidden-sm hidden-xs">  
+    <div id="containercanvas" style="display:block; float: left;min-width:200px;min-height:200px;">  
+      <canvas #cns width=1000 height=600></canvas>  
+    </div>  
+  </div>
+
+  <div class="row hidden-lg">
+    <div [ngClass]="calculateCardClasses(1)" style="width: 200px;">
+      <div class="card-header">iC Data Center</div>
+      <div class="card-body">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>Status:</td>
+              <td>{{systemOverview.ICDataCenterStatus}}</td>
+            </tr>
+            <tr>
+              <td>Server:</td>
+              <td>{{systemOverview.ICDataCenterAddress}}</td>
+            </tr>
+            <tr>
+              <td>Version:</td>
+              <td>{{systemOverview.ICDataCenterVersion}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div [ngClass]="calculateCardClasses(2)" style="width: 200px;">
+      <div class="card-header">Data Center Web</div>
+      <div class="card-body">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>Status:</td>
+              <td>{{systemOverview.DataCenterWebAppStatus}}</td>
+            </tr>
+            <tr>
+              <td>Server:</td>
+              <td>{{systemOverview.DataCenterWebAppAddress}}</td>
+            </tr>
+            <tr>
+              <td>Version:</td>
+              <td>{{systemOverview.DataCenterWebAppVersion}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div *ngIf="this.systemOverview.ExperimentCount >= 0">
+      <p>Last Import: {{systemOverview.LastImportDate| date:'MMM dd, hh:mm aa'}}</p>
+      <p>Last Update: {{systemOverview.LastUpdate| date:'MMM dd, hh:mm:ss aa'}}</p>
+      <p>Experiments: {{systemOverview.ExperimentCount}}</p>
+    </div>
+
+  </div>
+</div>
+
+
+
+

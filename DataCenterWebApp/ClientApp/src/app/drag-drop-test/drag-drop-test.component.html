@@ -1,0 +1,15 @@
+<div class="row">
+  <div [myDraggable]="{data: 'green', zone:'zone1'}" class="draggable col-lg-2 col-md-2 col-sm-6 col-xs-12">Draggable <span style="color:green;">Green</span></div>
+  <div [myDraggable]="{data: 'red', zone:'zone1'}" class="draggable col-lg-2 col-md-2 col-sm-6 col-xs-12">Draggable <span style="color:red;">Red</span></div>
+  <div [myDraggable]="{data: 'orange', zone:'zone1'}" class="draggable col-lg-2 col-md-2 col-sm-6 col-xs-12">Draggable <span style="color:orange;">Orange</span></div>
+  <div [myDropTarget]="{zone:'zone1'}" (myDrop)="onDropZone1($event)" [ngStyle]="myStylesZone1" class="drop-target col-lg-3 col-md-3 col-sm-6 col-xs-12">Drop Zone 1</div>
+</div>
+
+<div class="row">
+  <div [myDraggable]="{data: 'green', zone:'zone2'}" class="draggable col-lg-2 col-md-2 col-sm-6 col-xs-12">Draggable <span style="color:green;">Green</span></div>
+  <div [myDraggable]="{data: 'red', zone:'zone2'}" class="draggable col-lg-2 col-md-2 col-sm-6 col-xs-12">Draggable <span style="color:red;">Red</span></div>
+  <div [myDraggable]="{data: 'orange', zone:'zone2'}" class="draggable col-lg-2 col-md-2 col-sm-6 col-xs-12">Draggable <span style="color:orange;">Orange</span></div>
+  <div [myDropTarget]="{zone:'zone2'}" (myDrop)="onDropZone2($event)" [ngStyle]="myStylesZone2" class="drop-target col-lg-3 col-md-3 col-sm-6 col-xs-12">Drop Zone 2</div>
+</div>
+
+

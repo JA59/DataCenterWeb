@@ -1,0 +1,26 @@
+@media (max-width: 767px) {
+  /* On small screens, dont waste space at top of the screen */
+
+  h2 {
+    margin-top: 3px;
+  }
+}
+
+h3 {
+  margin-left: 20px;
+  color: yellow;
+}
+
+h4 {
+  margin-left: 40px;
+  color: cyan;
+}
+
+h5 {
+  margin-left: 60px;
+}
+
+h6 {
+  margin-left: 100px;
+}
+

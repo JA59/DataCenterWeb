@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Experiment UniqueElnId="SAMPLE" User="joe.amato" Project="PROJ2017" SchemaVersion="2.0" TrackingId="3ce27795-0000-423b-87dd-cdf79fb5164f" xsi:noNamespaceSchemaLocation="file:.\XML%20Import%20Schema%20-%20V3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Process ProcessType="Purification" TrackingId="f5314c70-e53d-4b5c-88bf-ffe1abe2b785">
+    <Stage StageType="DistillationOfProduct" Comment="" TrackingId="7b4b9a2c-82c4-45a1-ace1-923d59cfb9c3">
+      <Phase Comment="Phase 2" TrackingId="5376a499-0064-4f9e-8e58-769fde5608a4">
+        <OperationSequence>
+          <SeparateOperation TrackingId="92394089-f5fa-467e-85d5-a75841b0a392" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+            <Duration Value="30" TimeUnit="min" />
+            <ProductLayer>Upper</ProductLayer>
+            <WasteLayer>Upper</WasteLayer>
+            <IntermediateLayer>Upper</IntermediateLayer>
+          </SeparateOperation>
+          <RinseOperation TrackingId="8c4f852e-1b6f-41d2-ae06-5b7733ee9e67" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+          </RinseOperation>
+          <DischargeOperation TrackingId="d2067eb6-d97e-451f-9eba-0e905c31234e" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+            <Material TrackingId="9c37ac41-5e93-4bcb-8928-36e65b543a32" />
+            <Quantity Value="1" QuantityUnit="ml" />
+          </DischargeOperation>
+        </OperationSequence>
+        <OperationSequence>
+          <RecirculateOperation TrackingId="131f4c5f-9eef-40b3-a8f5-adb41d5849c9" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+          </RecirculateOperation>
+          <InertOperation TrackingId="9dc14f6d-3d6d-451d-8dca-cc3914bc362a" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+            <Duration Value="30" TimeUnit="min" />
+            <InertGas>Argon</InertGas>
+            <O2TargetInPercent>100</O2TargetInPercent>
+          </InertOperation>
+          <RinseOperation TrackingId="251a013f-caf8-488c-a7c5-dd83b664a9c8" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+          </RinseOperation>
+        </OperationSequence>
+      </Phase>
+    </Stage>
+    <Stage StageType="Homogenization" Comment="" TrackingId="a6507cf5-9152-4ce7-b9e0-1df4166945f5">
+      <Phase Comment="Phase 1" TrackingId="7a5c34e7-187c-46b1-b227-11fd853c426f">
+        <OperationSequence>
+          <WaitOperation TrackingId="1ca201b8-26ab-4403-8e90-13eef57e86f7" Comment="">
+            <Duration Value="30" TimeUnit="sec" />
+          </WaitOperation>
+          <SeparateOperation TrackingId="66d0ceaa-8d67-4246-97b2-00921ecdc78c" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+            <Duration Value="30" TimeUnit="min" />
+            <ProductLayer>Upper</ProductLayer>
+            <WasteLayer>Upper</WasteLayer>
+            <IntermediateLayer>Upper</IntermediateLayer>
+          </SeparateOperation>
+          <PackAndLabelOperation TrackingId="2c219094-6cb3-4601-bcad-e8c8b07b9d5a" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+          </PackAndLabelOperation>
+        </OperationSequence>
+        <OperationSequence>
+          <WashOperation TrackingId="9d914278-b136-4db1-9a61-43c105476d87" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+            <Duration Value="30" TimeUnit="min" />
+            <Temperature Value="20" TemperatureUnit="°C" />
+            <Pressure Value="1.0" PressureUnit="bar" />
+            <WithVacuum>true</WithVacuum>
+            <FlowRate Value="1.0" FlowRateUnit="l/min" />
+            <WashSolvent TrackingId="9c37ac41-5e93-4bcb-8928-36e65b543a32" />
+            <Quantity Value="1" QuantityUnit="ml" />
+          </WashOperation>
+          <SieveOperation TrackingId="108355ef-20b7-422a-8e26-2a8f02e71c0e" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+          </SieveOperation>
+          <DryOperation TrackingId="d3a492e0-526f-478b-8583-e6ecd4f97320" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+            <Duration Value="30" TimeUnit="min" />
+            <Temperature Value="20" TemperatureUnit="°C" />
+            <WithVacuum>true</WithVacuum>
+            <Pressure Value="1.0" PressureUnit="bar" />
+            <Speed Value="100" RotationSpeedUnit="rpm" />
+            <CarrierGas>Air</CarrierGas>
+            <FlowRate Value="1.0" FlowRateUnit="l/min" />
+            <WithHumidification>true</WithHumidification>
+            <EndCondition />
+          </DryOperation>
+        </OperationSequence>
+      </Phase>
+    </Stage>
+    <Stage StageType="Decomposition" Comment="" TrackingId="fd6b9ec3-c5ce-4c26-9199-29cb71679bb6">
+      <Phase Comment="Phase 0" TrackingId="aeda1b36-07d6-40dc-93d5-531922b34b06">
+        <OperationSequence>
+          <RinseOperation TrackingId="176d8c94-5bce-4db7-98c1-84cb2aac6ecb" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+          </RinseOperation>
+          <DischargeOperation TrackingId="069a71f8-9e45-4d18-b1c4-940af85f48df" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+            <Material TrackingId="9c37ac41-5e93-4bcb-8928-36e65b543a32" />
+            <Quantity Value="1" QuantityUnit="ml" />
+          </DischargeOperation>
+          <PressureAdjustOperation TrackingId="24deeb23-65a6-4f18-9c55-b400948824e7" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+            <Pressure Value="1.0" PressureUnit="bar" />
+          </PressureAdjustOperation>
+        </OperationSequence>
+        <OperationSequence>
+          <HomogenizeOperation TrackingId="3eab31ed-ea73-402a-a598-e749a9128cca" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+          </HomogenizeOperation>
+          <DoseAtRateOperation TrackingId="7a9a99be-ce2b-4793-ad4e-ecffc03d1ecc" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+            <Chemical TrackingId="9c37ac41-5e93-4bcb-8928-36e65b543a32" />
+            <Quantity Value="1" QuantityUnit="ml" />
+            <ManualParameterSet>
+              <Duration Value="1" TimeUnit="min" />
+            </ManualParameterSet>
+          </DoseAtRateOperation>
+          <FilterOperation TrackingId="169b0fe1-f83d-46db-8170-b7ff941b3821" Comment="">
+            <RequiresUserInteraction>false</RequiresUserInteraction>
+            <Duration Value="30" TimeUnit="min" />
+            <Temperature Value="20" TemperatureUnit="°C" />
+            <Recirculate>true</Recirculate>
+            <WithVacuum>true</WithVacuum>
+            <Pressure Value="1.0" PressureUnit="bar" />
+            <FlowRate Value="1.0" FlowRateUnit="l/min" />
+            <Diameter Value="1.0" LengthUnit="cm" />
+            <CakeDepth Value="1.0" LengthUnit="cm" />
+            <WeightOfIsolatedMaterial Value="1.0" MassUnit="g" />
+          </FilterOperation>
+        </OperationSequence>
+      </Phase>
+    </Stage>
+  </Process>
+  <Chemical Name="Substance 1" LotNumber="Lot123" TrackingId="9c37ac41-5e93-4bcb-8928-36e65b543a32">
+    <VolumeAmount Value="1" VolumeUnit="ml" />
+    <Density Value="1.000" DensityUnit="g/ml" />
+    <MolWeight Value="1.000" MolWeightUnit="g/mol" />
+    <Concentration Value="100" ConcentrationUnit="%" />
+  </Chemical>
+</Experiment>

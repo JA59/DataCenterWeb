@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row">
+    <h2>{{title}}</h2>
+    <p>This page contains features that are strictly for Demo purposes.</p>
+  </div>
+
+  <div class="row">
+    <h4>Bootswatch Superhero styling</h4>
+  </div>
+  <div class="row">
+    <span class="label label-default">Default</span>
+    <span class="label label-primary">Primary</span>
+    <span class="label label-success">Success</span>
+    <span class="label label-warning">Warning</span>
+    <span class="label label-danger">Danger</span>
+    <span class="label label-info">Info</span>
+  </div>
+
+
+
+  <div class="row">
+    <h4>Responsive UI</h4>
+  </div>
+  <div class="row">
+    <div class="device-xs visible-xs"><p>When the screen size is <span style="color: #5bc0de;">Extra Small</span>, show <span style="color: #5bc0de;">1</span> column.</p></div>
+    <div class="device-sm visible-sm"><p>When the screen size is <span style="color: #5bc0de;">Small</span>, show <span style="color: #5bc0de;">2</span> columns.</p></div>
+    <div class="device-md visible-md"><p>When the screen size is <span style="color: #5bc0de;">Medium</span>, show <span style="color: #5bc0de;">3</span> columns.</p></div>
+    <div class="device-lg visible-lg"><p>When the screen size is <span style="color: #5bc0de;">Large</span>, show <span style="color: #5bc0de;">4</span> columns.</p></div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let item of items">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><button (click)="doLogin(item.Name, item.Password)" [disabled]="!item.Enabled" class="btn-default" style="width: 200px; margin-top: 5px;">{{item.Name}}</button></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h4>Drag and Drop</h4>
+  </div>
+  <div class="row">
+    <drag-drop-test></drag-drop-test>
+  </div>
+
+</div>
+
+

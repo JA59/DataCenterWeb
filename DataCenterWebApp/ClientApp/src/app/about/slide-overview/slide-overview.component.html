@@ -1,0 +1,38 @@
+<div class="container-fluid">
+
+<h3>StepStone (Proof Of Concept) </h3>
+
+    <nav class="navbar navbar-default navbar-static-top" style="margin-top: 15px;">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li [ngClass]="{'active': slideNumber == 1}"><a (click)="showSlide(1)">StepStone</a></li>
+        <li [ngClass]="{'active': slideNumber == 2}"><a (click)="showSlide(2)">From Hello World</a></li>
+        <li [ngClass]="{'active': slideNumber == 3}"><a (click)="showSlide(3)">To iC Data Center Web</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <div style="margin-top: 15px; margin-left: 30px;">
+      <div *ngIf="this.slideNumber == 1">
+        <h4>StepStone ELN Experiments</h4>
+        <h5>Current design has no capability to search, preview or delete ELN Experiments.</h5>
+        <h5>Perfect target for ASP.NET Core MVC SPA Angular.</h5>
+        <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/stepstone.png">
+      </div>
+      <div *ngIf="this.slideNumber == 2">
+        <h4>ASP.NET Core 2.1 MVC Angular Project Template</h4>
+        <h5>Use dotnet CLI to create a new project </h5>
+        <h6><kbd>dotnet new angular</kbd></h6>
+        <h5>Build and run from Visual Studio 2017</h5>
+        <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/sample overview.png">
+      </div>
+      <div *ngIf="this.slideNumber == 3">
+        <h4>iC Data Center Web</h4>
+        <h5>Provide a list of planned experiments.</h5>
+        <h5>Provide a detailed view of an ELN Experiment.</h5>
+        <h5>Allow an administrator to delete planned experiments.</h5>
+        <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/architecture overview.png">
+      </div>
+    </div>
+
+</div>

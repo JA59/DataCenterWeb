@@ -1,0 +1,22 @@
+h3 {
+  margin-left: 20px;
+  color: orange;
+}
+
+h4 {
+  margin-left: 40px;
+  color: cyan;
+}
+
+h5 {
+  margin-left: 60px;
+}
+
+h6 {
+  margin-left: 100px;
+}
+
+kbd {
+  color: yellow;
+}
+

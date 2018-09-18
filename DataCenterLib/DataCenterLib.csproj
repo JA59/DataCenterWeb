@@ -1,0 +1,93 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\task_centrifuge_32.png" />
+    <None Remove="Resources\task_discharge_32.png" />
+    <None Remove="Resources\task_distill_32.png" />
+    <None Remove="Resources\task_dose_32.png" />
+    <None Remove="Resources\task_dry_32.png" />
+    <None Remove="Resources\task_filter_32.png" />
+    <None Remove="Resources\task_heat_cool_32.png" />
+    <None Remove="Resources\task_homigenize_32.png" />
+    <None Remove="Resources\task_inert_32.png" />
+    <None Remove="Resources\task_manual_add_32.png" />
+    <None Remove="Resources\task_message_32.png" />
+    <None Remove="Resources\task_mill_32.png" />
+    <None Remove="Resources\task_pack_label_32.png" />
+    <None Remove="Resources\task_ph_loop_32.png" />
+    <None Remove="Resources\task_pressure_32.png" />
+    <None Remove="Resources\task_recirculate_32.png" />
+    <None Remove="Resources\task_reflux_32.png" />
+    <None Remove="Resources\task_rinse_32.png" />
+    <None Remove="Resources\task_separate_32.png" />
+    <None Remove="Resources\task_settle_32.png" />
+    <None Remove="Resources\task_sieve_32.png" />
+    <None Remove="Resources\task_stir_32.png" />
+    <None Remove="Resources\task_take_sample_32.png" />
+    <None Remove="Resources\task_wait_32.png" />
+    <None Remove="Resources\task_wash_32.png" />
+    <None Remove="Resources\task_wet_mill_32.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\svg.xslt" />
+    <EmbeddedResource Include="Resources\task_centrifuge_32.png" />
+    <EmbeddedResource Include="Resources\task_discharge_32.png" />
+    <EmbeddedResource Include="Resources\task_distill_32.png" />
+    <EmbeddedResource Include="Resources\task_dose_32.png" />
+    <EmbeddedResource Include="Resources\task_dry_32.png" />
+    <EmbeddedResource Include="Resources\task_filter_32.png" />
+    <EmbeddedResource Include="Resources\task_heat_cool_32.png" />
+    <EmbeddedResource Include="Resources\task_homigenize_32.png" />
+    <EmbeddedResource Include="Resources\task_inert_32.png" />
+    <EmbeddedResource Include="Resources\task_manual_add_32.png" />
+    <EmbeddedResource Include="Resources\task_message_32.png" />
+    <EmbeddedResource Include="Resources\task_mill_32.png" />
+    <EmbeddedResource Include="Resources\task_pack_label_32.png" />
+    <EmbeddedResource Include="Resources\task_ph_loop_32.png" />
+    <EmbeddedResource Include="Resources\task_pressure_32.png" />
+    <EmbeddedResource Include="Resources\task_recirculate_32.png" />
+    <EmbeddedResource Include="Resources\task_reflux_32.png" />
+    <EmbeddedResource Include="Resources\task_rinse_32.png" />
+    <EmbeddedResource Include="Resources\task_separate_32.png" />
+    <EmbeddedResource Include="Resources\task_settle_32.png" />
+    <EmbeddedResource Include="Resources\task_sieve_32.png" />
+    <EmbeddedResource Include="Resources\task_stir_32.png" />
+    <EmbeddedResource Include="Resources\task_take_sample_32.png" />
+    <EmbeddedResource Include="Resources\task_wait_32.png" />
+    <EmbeddedResource Include="Resources\task_wash_32.png" />
+    <EmbeddedResource Include="Resources\task_wet_mill_32.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.5.3" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\10.0.1\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
