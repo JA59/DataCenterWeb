@@ -34,8 +34,7 @@ import { SystemOverviewComponent } from './system-overview/system-overview.compo
 
 import { SlideIntroductionComponent } from './about/slide-introduction/slide-introduction.component';
 import { SlideOverviewComponent } from './about/slide-overview/slide-overview.component';
-import { Slide1Component } from './about/slide1/slide1.component';
-import { Slide2Component } from './about/slide2/slide2.component';
+import { SlideDotNetComponent } from './about/slide-dotnet/slide-dotnet.component';
 import { Slide3Component } from './about/slide3/slide3.component';
 import { Slide4Component } from './about/slide4/slide4.component';
 import { Slide5Component } from './about/slide5/slide5.component';
@@ -66,8 +65,7 @@ import { Slide7Component } from './about/slide7/slide7.component';
     DropTargetDirective,
     SlideIntroductionComponent,
     SlideOverviewComponent,
-    Slide1Component,
-    Slide2Component,
+    SlideDotNetComponent,
     Slide3Component,
     Slide4Component,
     Slide5Component,
