@@ -20,3 +20,10 @@ kbd {
   color: yellow;
 }
 
+.prettyimage {
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
