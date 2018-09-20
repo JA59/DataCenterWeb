@@ -32,10 +32,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { SystemOverviewComponent } from './system-overview/system-overview.component';
 
-import { SlideIntroductionComponent } from './about/slide-introduction/slide-introduction.component';
+import { SlideIntroductionMvcComponent } from './about/slide-introduction-mvc/slide-introduction-mvc.component';
+import { SlideIntroductionCoreComponent } from './about/slide-introduction-core/slide-introduction-core.component';
 import { SlideOverviewComponent } from './about/slide-overview/slide-overview.component';
 import { SlideDotNetComponent } from './about/slide-dotnet/slide-dotnet.component';
-import { Slide3Component } from './about/slide3/slide3.component';
 import { Slide4Component } from './about/slide4/slide4.component';
 import { Slide5Component } from './about/slide5/slide5.component';
 import { Slide6Component } from './about/slide6/slide6.component';
@@ -63,10 +63,10 @@ import { Slide7Component } from './about/slide7/slide7.component';
     HighlightDirective,
     DraggableDirective,
     DropTargetDirective,
-    SlideIntroductionComponent,
+    SlideIntroductionMvcComponent,
+    SlideIntroductionCoreComponent,
     SlideOverviewComponent,
     SlideDotNetComponent,
-    Slide3Component,
     Slide4Component,
     Slide5Component,
     Slide6Component,

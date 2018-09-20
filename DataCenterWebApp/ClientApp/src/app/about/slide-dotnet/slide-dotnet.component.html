@@ -1,6 +1,11 @@
 <div class="container-fluid">
 
-  <h3>.Net Everywhere</h3>
+  <h3>.Net Platforms</h3>
 
-  <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/dotnet everywhere.png">
+  <div *ngIf="this.slideNumber == 1">
+    <img style="margin-top: 15px;" class="img-responsive" (click)="showSlide(2)" src="../../../assets/Images/dotnet frameworks 1.png">
+  </div>
+  <div *ngIf="this.slideNumber == 2">
+    <img style="margin-top: 15px;" class="img-responsive" (click)="showSlide(1)" src="../../../assets/Images/dotnet frameworks 2.png">
+  </div>
 </div>

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+
+<h3>Background (.NET Core and ASP.NET Core MVC)</h3>
+
+    <nav class="navbar navbar-default navbar-static-top" style="margin-top: 15px;">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li [ngClass]="{'active': slideNumber == 1}"><a (click)="showSlide(1)">.NET Core</a></li>
+        <li [ngClass]="{'active': slideNumber == 2}"><a (click)="showSlide(2)">ASP.NET Core</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <div style="margin-top: 15px; margin-left: 30px;">
+      <div *ngIf="this.slideNumber == 1">
+        <h4>.NET Core (2.1)</h4>
+        <h5>Cross platform (Windows, Mac, Linux) open source (GitHub) implementation of .NET Standard</h5>
+        <h5>Deploy (publish) as either framework dependent (FDD) or self contained (SCD)</h5>
+        <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/core.png">
+      </div>
+      <div *ngIf="this.slideNumber == 2">
+        <h4>ASP.NET Core (2.1)</h4>
+        <h5>Create a web based solution built on top of .NET Core</h5>
+        <h5>Conforms to the OWIN standard.</h5>
+        <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/owin.png">
+      </div>
+    </div>
+
+</div>

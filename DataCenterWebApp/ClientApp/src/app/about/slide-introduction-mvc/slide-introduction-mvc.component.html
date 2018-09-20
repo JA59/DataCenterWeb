@@ -5,54 +5,37 @@
     <nav class="navbar navbar-default navbar-static-top" style="margin-top: 15px;">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-        <li [ngClass]="{'active': slideNumber == 1}"><a (click)="showSlide(1)">.NET Core</a></li>
-        <li [ngClass]="{'active': slideNumber == 2}"><a (click)="showSlide(2)">ASP.NET Core</a></li>
-        <li [ngClass]="{'active': slideNumber == 3}"><a (click)="showSlide(3)">MVC Traditional</a></li>
-        <li [ngClass]="{'active': slideNumber == 4}"><a (click)="showSlide(4)">MVC SPA</a></li>
-        <li [ngClass]="{'active': slideNumber == 5}"><a (click)="showSlide(5)">ASP.NET Core MVC SPA</a></li>
-        <li [ngClass]="{'active': slideNumber == 6}"><a (click)="showSlide(6)">Why This Matters</a></li>
+        <li [ngClass]="{'active': slideNumber == 1}"><a (click)="showSlide(1)">MVC</a></li>
+        <li [ngClass]="{'active': slideNumber == 2}"><a (click)="showSlide(2)">MVC SPA</a></li>
+        <li [ngClass]="{'active': slideNumber == 3}"><a (click)="showSlide(3)">ASP.NET Core MVC SPA</a></li>
+        <li [ngClass]="{'active': slideNumber == 4}"><a (click)="showSlide(4)">Silverlight Replacement</a></li>
       </ul>
     </div>
   </nav>
 
-    <div style="margin-top: 15px; margin-left: 30px;">
       <div *ngIf="this.slideNumber == 1">
-        <h4>.NET Core (2.1)</h4>
-        <h5>Cross platform (Windows, Mac, Linux) open source implementation of .NET Standard</h5>
-        <h5>Deploy (publish) as either framework dependent (FDD) or self contained (SCD)</h5>
-        <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/core.png">
-      </div>
-      <div *ngIf="this.slideNumber == 2">
-        <h4>ASP.NET Core (2.1)</h4>
-        <h5>Create a web based solution built on top of .NET Core</h5>
-        <h5>Conforms to the OWIN standard.</h5>
-        <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/owin.png">
-      </div>
-      <div *ngIf="this.slideNumber == 3">
         <h4>MVC Traditional Architecture</h4>
         <h5>User navigates to home page; server returns the home page.</h5>
         <h5>User navigates to another page; server generates and returns another HTML page.</h5>
         <h5>Controllers within the web server acesss the model to generate HTML pages.</h5>
         <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/tradition web based MVC.png">
       </div>
-      <div *ngIf="this.slideNumber == 4">
+      <div *ngIf="this.slideNumber == 2">
         <h4>MVC Single Page Application Architecture</h4>
         <h5>User navigates to home page; server returns an entire application.</h5>
         <h5>Application displays home view.</h5>
         <h5>Views request view models (json) from the web server.</h5>
         <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/SPA web based MVC.png">
       </div>
-      <div *ngIf="this.slideNumber == 5">
+      <div *ngIf="this.slideNumber == 3">
         <h4>MVC ASP.NET Core 2.1 SPA Architecture</h4>
         <h5>User navigates to home page; Kestrel server constructs home controller.</h5>
         <h5>Home controller returns entire application.</h5>
         <h5>Controllers are constructed as needed to handle requests from the browser.</h5>
         <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/SPA ASP.NET Core MVC.png">
       </div>
-      <div *ngIf="this.slideNumber == 6">
+      <div *ngIf="this.slideNumber == 4">
         <h4>The SilverLight client maps well to Angular / ASP.NET Core MVC</h4>
         <img style="margin-top: 15px;" class="img-responsive" src="../../../assets/Images/Silverlight replacement.png">
       </div>
-    </div>
-
 </div>

@@ -8,7 +8,7 @@ import { Component } from "@angular/core";
 
 export class AboutComponent {
   title = "All About iC Data Center Web";
-  slideNumber: number = 0;
+  slideNumber: number = 1;
 
   constructor() {
   }

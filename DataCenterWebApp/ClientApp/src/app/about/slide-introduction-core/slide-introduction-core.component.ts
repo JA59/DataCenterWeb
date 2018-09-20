@@ -1,12 +1,12 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "slide-introduction",
-  templateUrl: "./slide-introduction.component.html",
+  selector: "slide-introduction-core",
+  templateUrl: "./slide-introduction-core.component.html",
   styleUrls: ['../slide.component.css']
 })
 
-export class SlideIntroductionComponent {
+export class SlideIntroductionCoreComponent {
   slideNumber: number = 1;
 
   constructor() {

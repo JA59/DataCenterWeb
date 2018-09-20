@@ -6,13 +6,12 @@
   <nav class="navbar navbar-default navbar-static-top" style="margin-top: 15px;">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-        <li [ngClass]="{'active': slideNumber == 0}"><a (click)="showSlide(0)">.Net Everywhere</a></li>
-        <li [ngClass]="{'active': slideNumber == 1}"><a (click)="showSlide(1)">Background</a></li>
-        <li [ngClass]="{'active': slideNumber == 2}"><a (click)="showSlide(2)">Overview</a></li>
-        <li [ngClass]="{'active': slideNumber == 3}"><a (click)="showSlide(3)">Tools</a></li>
-        <li [ngClass]="{'active': slideNumber == 4}"><a (click)="showSlide(4)">Hello world</a></li>
-        <li [ngClass]="{'active': slideNumber == 5}"><a (click)="showSlide(5)">Beyond</a></li>
-        <li [ngClass]="{'active': slideNumber == 6}"><a (click)="showSlide(6)">Stepstone</a></li>
+        <li [ngClass]="{'active': slideNumber == 1}"><a (click)="showSlide(1)">.NET Platforms</a></li>
+        <li [ngClass]="{'active': slideNumber == 2}"><a (click)="showSlide(2)">.NET Core</a></li>
+        <li [ngClass]="{'active': slideNumber == 3}"><a (click)="showSlide(3)">MVC</a></li>
+        <li [ngClass]="{'active': slideNumber == 4}"><a (click)="showSlide(4)">StepStone</a></li>
+        <li [ngClass]="{'active': slideNumber == 5}"><a (click)="showSlide(5)">Hello world</a></li>
+        <li [ngClass]="{'active': slideNumber == 6}"><a (click)="showSlide(6)">Beyond</a></li>
         <li [ngClass]="{'active': slideNumber == 7}"><a (click)="showSlide(7)">Arcitecture</a></li>
         <li [ngClass]="{'active': slideNumber == 8}"><a (click)="showSlide(8)">Links</a></li>
       </ul>
@@ -22,28 +21,28 @@
 
 
   <div style="margin-top: 15px; margin-left: 30px;">
-    <div *ngIf="this.slideNumber == 0">
+    <div *ngIf="this.slideNumber == 1">
       <slide-dotnet></slide-dotnet>
     </div>
-    <div *ngIf="this.slideNumber == 1">
-      <slide-introduction></slide-introduction>
-    </div>
     <div *ngIf="this.slideNumber == 2">
-      <slide-overview></slide-overview>
+      <slide-introduction-core></slide-introduction-core>
     </div>
     <div *ngIf="this.slideNumber == 3">
-      <slide3></slide3>
+      <slide-introduction-mvc></slide-introduction-mvc>
     </div>
     <div *ngIf="this.slideNumber == 4">
-      <slide4></slide4>
+      <slide-overview></slide-overview>
     </div>
     <div *ngIf="this.slideNumber == 5">
-      <slide5></slide5>
+      <slide4></slide4>
     </div>
     <div *ngIf="this.slideNumber == 6">
-      <slide6></slide6>
+      <slide5></slide5>
     </div>
     <div *ngIf="this.slideNumber == 7">
+      <slide6></slide6>
+    </div>
+    <div *ngIf="this.slideNumber == 8">
       <slide7></slide7>
     </div>
   </div>
