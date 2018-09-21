@@ -7,12 +7,12 @@
     <div class="container-fluid">
       <ul class="nav navbar-nav">
         <li [ngClass]="{'active': slideNumber == 1}"><a (click)="showSlide(1)">.NET Platforms</a></li>
-        <li [ngClass]="{'active': slideNumber == 2}"><a (click)="showSlide(2)">.NET Core</a></li>
-        <li [ngClass]="{'active': slideNumber == 3}"><a (click)="showSlide(3)">MVC</a></li>
+        <li [ngClass]="{'active': slideNumber == 2}"><a (click)="showSlide(2)">MVC</a></li>
+        <li [ngClass]="{'active': slideNumber == 3}"><a (click)="showSlide(3)">ASP.NET Core</a></li>
         <li [ngClass]="{'active': slideNumber == 4}"><a (click)="showSlide(4)">StepStone</a></li>
-        <li [ngClass]="{'active': slideNumber == 5}"><a (click)="showSlide(5)">Hello world</a></li>
-        <li [ngClass]="{'active': slideNumber == 6}"><a (click)="showSlide(6)">Beyond</a></li>
-        <li [ngClass]="{'active': slideNumber == 7}"><a (click)="showSlide(7)">Arcitecture</a></li>
+        <li [ngClass]="{'active': slideNumber == 5}"><a (click)="showSlide(5)">Demo</a></li>
+        <li [ngClass]="{'active': slideNumber == 6}"><a (click)="showSlide(6)">Server Side</a></li>
+        <li [ngClass]="{'active': slideNumber == 7}"><a (click)="showSlide(7)">Front End</a></li>
         <li [ngClass]="{'active': slideNumber == 8}"><a (click)="showSlide(8)">Links</a></li>
       </ul>
     </div>
@@ -25,16 +25,16 @@
       <slide-dotnet></slide-dotnet>
     </div>
     <div *ngIf="this.slideNumber == 2">
-      <slide-introduction-core></slide-introduction-core>
+      <slide-introduction-mvc></slide-introduction-mvc>
     </div>
     <div *ngIf="this.slideNumber == 3">
-      <slide-introduction-mvc></slide-introduction-mvc>
+      <slide-introduction-core></slide-introduction-core>
     </div>
     <div *ngIf="this.slideNumber == 4">
       <slide-overview></slide-overview>
     </div>
     <div *ngIf="this.slideNumber == 5">
-      <slide4></slide4>
+      <slide-demo></slide-demo>
     </div>
     <div *ngIf="this.slideNumber == 6">
       <slide5></slide5>

@@ -36,7 +36,7 @@ import { SlideIntroductionMvcComponent } from './about/slide-introduction-mvc/sl
 import { SlideIntroductionCoreComponent } from './about/slide-introduction-core/slide-introduction-core.component';
 import { SlideOverviewComponent } from './about/slide-overview/slide-overview.component';
 import { SlideDotNetComponent } from './about/slide-dotnet/slide-dotnet.component';
-import { Slide4Component } from './about/slide4/slide4.component';
+import { SlideDemoComponent } from './about/slide-demo/slide-demo.component';
 import { Slide5Component } from './about/slide5/slide5.component';
 import { Slide6Component } from './about/slide6/slide6.component';
 import { Slide7Component } from './about/slide7/slide7.component';
@@ -67,7 +67,7 @@ import { Slide7Component } from './about/slide7/slide7.component';
     SlideIntroductionCoreComponent,
     SlideOverviewComponent,
     SlideDotNetComponent,
-    Slide4Component,
+    SlideDemoComponent,
     Slide5Component,
     Slide6Component,
     Slide7Component
