@@ -30,16 +30,12 @@ namespace DataCenterWebApp
 
             var host = builder.Build();
 
-
-
             if (StartupConstants.RunMode == RunMode.Service)
             {
                 host.RunAsCustomService();
             }
             else
             {
-                host.Run();
-
                 try
                 {
                     if (logger != null)

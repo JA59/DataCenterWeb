@@ -1,0 +1,19 @@
+﻿git clone https://github.com/JA59/DataCenterWeb.git
+
+proxy settings (C:\Users\amato-1\.gitconfig)
+
+[http]
+	sslVerify = false
+	proxy = http://am\\amato-1:mypassword@us10sprxv00.am.mt.mtnet:8080/
+[user]
+	name = Joe Amato
+	email = joe.amato@mt.com
+
+npm settings (C:\Users\amato-1\.gitconfig)
+
+strict-ssl=false
+proxy=http://amato-1:mypassword@us10sprxv00.am.mt.mtnet:8080/
+https-proxy=http://amato-1:mypassword@us10sprxv00.am.mt.mtnet:8080
+
+
+

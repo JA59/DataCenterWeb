@@ -1,31 +1,31 @@
 ﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Identity;
-using DataCenterWebApp.CustomIdentity;
-using Microsoft.Extensions.Configuration;
-using DataCenterWebApp.ViewModels;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+
 using DataCenterCommon.Interfaces;
+using DataCenterWebApp.CustomIdentity;
+using DataCenterWebApp.ViewModels;
 
 namespace DataCenterWebApp.Controllers
 {
+    /// <summary>
+    /// Controller for handling the SystemOverview route
+    /// </summary>
     [Route("api/[controller]")]
     public class SystemOverviewController : BaseApiController
     {
         private readonly ILogger<SystemOverviewController> _logger;
         #region Constructor
         public SystemOverviewController(
-            RoleManager<MyRole> roleManager,
-            UserManager<MyUser> userManager,
-            IConfiguration configuration,
-            IDataCenterLib dataCenterLib,
-            ILogger<SystemOverviewController> logger
+            RoleManager<MyRole> roleManager,            // role manager - ued to obtain roles for the currently logged on user
+            UserManager<MyUser> userManager,            // user manager - used to obtain the currently logged on user 
+            IConfiguration configuration,               // configuration - not used (needed to construct base class)
+            IDataCenterLib dataCenterLib,               // interface to iC Data Center (live or simulated)
+            ILogger<SystemOverviewController> logger    // logger (not in base class because it is for type SystemOverviewController)
 
             )  : base(roleManager, userManager, configuration, dataCenterLib)
         {
@@ -45,28 +45,32 @@ namespace DataCenterWebApp.Controllers
         {
             try
             {
+                // Log that we were called.
                 _logger.LogInformation("Summary");
-                // Use the summary from the cache, filling in the current user and roles
-                //var so = DataCenterCache.Instance.SystemOverview;
-                var so = DataCenterLib.GetSystemOverview();
-                var result = new SystemOverviewViewModel()
+
+                // Get a SystemOverview object from the IDataCenterLib object
+                var systemOverview = DataCenterLib.GetSystemOverview();
+                
+                // Construct a SystemOverviewViewModel object from the SystemOverview object
+                var systemOverviewViewModel = new SystemOverviewViewModel()
                 {
-                    LastImportDate = so.LastImportDate,
-                    ExperimentCount = so.ExperimentCount,
-                    HighestSequenceID = so.HighestSequenceID,
-                    ICDataCenterAddress = so.ICDataCenterAddress,
-                    ICDataCenterVersion = so.ICDataCenterVersion,
-                    ICDataCenterStatus = so.ICDataCenterStatus,
-                    DataCenterWebAppAddress = so.DataCenterWebAppAddress,
-                    DataCenterWebAppVersion = so.DataCenterWebAppVersion,
-                    DataCenterWebAppStatus = so.DataCenterWebAppStatus,
-                    LastUpdate = so.LastUpdate,
+                    LastImportDate = systemOverview.LastImportDate,
+                    ExperimentCount = systemOverview.ExperimentCount,
+                    HighestSequenceID = systemOverview.HighestSequenceID,
+                    ICDataCenterAddress = systemOverview.ICDataCenterAddress,
+                    ICDataCenterVersion = systemOverview.ICDataCenterVersion,
+                    ICDataCenterStatus = systemOverview.ICDataCenterStatus,
+                    DataCenterWebAppAddress = systemOverview.DataCenterWebAppAddress,
+                    DataCenterWebAppVersion = systemOverview.DataCenterWebAppVersion,
+                    DataCenterWebAppStatus = systemOverview.DataCenterWebAppStatus,
+                    LastUpdate = systemOverview.LastUpdate,
                     LoggedOnUser = GetUser(),
                     LoggedOnRole = GetRoles()
-                };  
-                
+                };
+
+                // Return the SystemOverviewViewModel in JSON format
                 return new JsonResult(
-                    result,
+                    systemOverviewViewModel,
                     new JsonSerializerSettings()
                     {
                         Formatting = Formatting.Indented
@@ -74,11 +78,16 @@ namespace DataCenterWebApp.Controllers
             }
             catch (Exception exc)
             {
-                var a = exc;
+                // Log the exception and return it to the caller
+                _logger.LogError(exc.ToString());
                 throw;
             }
         }
 
+        /// <summary>
+        /// Get a string that contains a comma separated set of roles for the current user (based on the ClaimsPrincipal)
+        /// </summary>
+        /// <returns></returns>
         private string GetRoles()
         {
             try
@@ -96,6 +105,10 @@ namespace DataCenterWebApp.Controllers
             }
         }
 
+        /// <summary>
+        /// Get a string that represents the currently logged on user (based on the ClaimsPrincipal)
+        /// </summary>
+        /// <returns></returns>
         private string GetUser()
         {
             try
