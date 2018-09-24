@@ -9,9 +9,24 @@
     <img class="img-responsive prettyimage" (click)="showSlide(3)" src="../../../assets/Images/dotnet frameworks 2.png">
   </div>
   <div *ngIf="this.slideNumber == 3">
-    <h4>What is .NET Core (2.1) ?</h4>
-    <h5>Cross platform (Windows, Mac, Linux) open source (GitHub) implementation of .NET Standard</h5>
-    <h5>Deploy (publish) as either framework dependent (FDD) or self contained (SCD)</h5>
+    <div class="row">
+      <div class="col-lg-6">
     <img class="img-responsive prettyimage" (click)="showSlide(1)" src="../../../assets/Images/core.png">
+      </div>
+      <div class="col-lg-6">
+    <h4>.NET Core (2.1)</h4>
+    <h5>Cross platform (Windows, Mac, Linux)</h5>
+    <h5>Open source (GitHub)</h5>
+    <h5>Implementation of .NET Standard</h5>
+    <h4>Deployment Models</h4>
+    <h5>Framework dependent (FDD)</h5>
+        <h6>.NET Core 2.1 installed</h6>
+        <h6>dotnet.exe hosts app</h6>
+        <h6>platform independent</h6>
+    <h5>self contained (SCD)</h5>
+        <h6>targets a platform</h6>
+        <h6>executable in native format</h6>
+      </div>
+    </div>
   </div>
 </div>

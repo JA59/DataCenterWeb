@@ -38,9 +38,9 @@ import { SlideIntroductionCoreComponent } from './about/slide-introduction-core/
 import { SlideOverviewComponent } from './about/slide-overview/slide-overview.component';
 import { SlideDotNetComponent } from './about/slide-dotnet/slide-dotnet.component';
 import { SlideDemoComponent } from './about/slide-demo/slide-demo.component';
-import { Slide5Component } from './about/slide5/slide5.component';
-import { Slide6Component } from './about/slide6/slide6.component';
-import { Slide7Component } from './about/slide7/slide7.component';
+import { SlideServerSideComponent } from './about/slide-server-side/slide-server-side.component';
+import { SlideAngularComponent } from './about/slide-angular/slide-angular.component';
+import { SlideSummaryComponent } from './about/slide-summary/slide-summary.component';
 
 
 
@@ -70,9 +70,9 @@ import { Slide7Component } from './about/slide7/slide7.component';
     SlideOverviewComponent,
     SlideDotNetComponent,
     SlideDemoComponent,
-    Slide5Component,
-    Slide6Component,
-    Slide7Component
+    SlideServerSideComponent,
+    SlideAngularComponent,
+    SlideSummaryComponent
 
   ],
   imports: [

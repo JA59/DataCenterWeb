@@ -14,14 +14,14 @@
         <li [ngClass]="{'active': slideNumber == 6}"><a (click)="showSlide(6)">Demo</a></li>
         <li [ngClass]="{'active': slideNumber == 7}"><a (click)="showSlide(7)">Server Side</a></li>
         <li [ngClass]="{'active': slideNumber == 8}"><a (click)="showSlide(8)">Front End</a></li>
-        <li [ngClass]="{'active': slideNumber == 9}"><a (click)="showSlide(9)">Links</a></li>
+        <li [ngClass]="{'active': slideNumber == 9}"><a (click)="showSlide(9)">Summary</a></li>
       </ul>
     </div>
   </nav>
 
 
 
-  <div style="margin-top: 15px; margin-left: 30px;">
+  <div style="margin-top: 15px; margin-left: 30px;"> 
     <div *ngIf="this.slideNumber == 1">
       <slide-intro></slide-intro>
     </div>
@@ -41,13 +41,13 @@
       <slide-demo></slide-demo>
     </div>
     <div *ngIf="this.slideNumber == 7">
-      <slide5></slide5>
+      <slide-server-side></slide-server-side>
     </div>
     <div *ngIf="this.slideNumber == 8">
-      <slide6></slide6>
+      <slide-angular></slide-angular>
     </div>
     <div *ngIf="this.slideNumber == 9">
-      <slide7></slide7>
+      <slide-summary></slide-summary>
     </div>
   </div>
 </div>
