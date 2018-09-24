@@ -1,0 +1,65 @@
+<div class="container-fluid">
+
+  <div *ngIf="this.slideNumber == 1">
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-responsive prettyimage" (click)="showSlide(2)" src="../../../assets/Images/cover.jpg">
+      </div>
+      <div class="col-lg-6">
+        <h3>SilverLight is Dying </h3>
+        <h5>In 2013, Microsoft announced that they had ceased development of Silverlight except for patches and bugfixes</h5>
+        <h4>Chrome dropped support in September, 2015</h4>
+        <h4>FireFox dropped support in March, 2017</h4>
+        <h4>Microsoft Edge never supported it</h4>
+        <h4>Internet Explorer 11</h4>
+        <h5>End of Life, October 2021</h5>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="this.slideNumber == 2">
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-responsive bookimage" (click)="showSlide(3)" src="../../../assets/Images/current.png">
+      </div>
+      <div class="col-lg-6">
+        <h3>Client is downloaded from server</h3>
+        <h4>No client installation</h4>
+        <h3>Client calls WCF based services</h3>
+        <h4>No chance of a version mismatch</h4>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="this.slideNumber == 3">
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-responsive bookimage" (click)="showSlide(4)" src="../../../assets/Images/wpf.png">
+      </div>
+      <div class="col-lg-6">
+        <h3>WPF based client</h3>
+        <h4>XAML ports easily</h4>
+        <h5>Minor differences (watermarks, etc.)</h5>
+        <h5>Quick prototype proved concept</h5>
+        <h4>Downside</h4>
+        <h5>Client must be installed</h5>
+        <h5>Possible version mismatch</h5>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="this.slideNumber == 4">
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-responsive bookimage" (click)="showSlide(1)" src="../../../assets/Images/angular.png">
+      </div>
+      <div class="col-lg-6">
+        <h3>ASP.NET Core / Angular</h3>
+        <h4>Cross Platform</h4>
+          <h5>Windows, Azure, Windows IoT Core</h5>
+        <h4>Many New Technologies</h4>
+        <h5>.NET Core</h5>
+        <h5>ASP.NET Core</h5>
+        <h5>HTML, CSS, TypeScript/JavaScript</h5>
+        <h5>Angular</h5>
+      </div>
+    </div>
+  </div>
+</div>

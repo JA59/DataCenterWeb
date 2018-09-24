@@ -34,7 +34,7 @@ namespace DataCenterWebApp.Controllers
         #endregion
 
         /// <summary>
-        /// GET: api/overview/Summary}
+        /// GET: api/SystemOverview/Summary}
         /// Retrieves the specified page of planned experiments
         /// </summary>
         /// <param name="num">the number of planned experiments to retrieve</param>

@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
 })
 
 export class AboutComponent {
-  title = "All About iC Data Center Web";
+  title = "ASP.NET Core and Angular";
   slideNumber: number = 1;
 
   constructor() {
