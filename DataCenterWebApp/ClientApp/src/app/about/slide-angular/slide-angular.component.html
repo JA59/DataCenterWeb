@@ -1,12 +1,67 @@
 <div class="container-fluid">
+  <div *ngIf="this.slideNumber == 1" (click)="showSlide(2)">
+    <h3>Angular</h3>
+    <h5>Framework develped by Google for Gmail, etc.</h5>
+    <h5>Supported by modern browsers (Edge, Chrome, Firefox, Safari)</h5>
+    <h6>"polyfils" are needed for IE 9, 10, 11</h6>
+    <h4>History</h4>
+    <table class="table table-bordered" style="width:300px; margin-left:60px;">
+      <tr><td>AngularJS</td><td>October, 2010</td></tr>
+      <tr><td>Angular 2.0</td><td>May,2016 (complete rewrite)</td></tr>
+      <tr><td>Angular 4.0</td><td>March,2017</td></tr>
+      <tr><td>Angular 5.0</td><td>November, 2017 (dotnet default)</td></tr>
+      <tr><td>Angular 6.0</td><td>May, 2018</td><td></td></tr>
+      <tr><td>Angular 7.0</td><td>October, 2018</td></tr>
+    </table>
+  </div>
+  <div *ngIf="this.slideNumber == 2" (click)="showSlide(2)">
+    <h3>Angular Modules implement components and Services</h3>
+    <div class="row">
+      <div class="col-lg-6">
+        <h4>Components</h4>
+        <h5>Combines Typescript, HTML, and CSS</h5>
+        <h5>Data binding between Typescript and HTML</h5>
+        <h6>Interpolation</h6>
+        <kbd>&lt;h1&gt;&#123;&#123; title &#125;&#125;&lt;/h1&gt;</kbd>
+        <h6>One Way Binding</h6>
+        <h6>Event Binding</h6>
+        <h6>Two Way binding</h6>
+      </div>
+      <div class="col-lg-6">
+        <h3>Server conforms to OWIN Standard</h3>
+        <h4>Application is hosted by dotnet.exe oo IIS</h4>
+        <h4>Kestrel is the web server created for ASP.NET Core</h4>
+        <h4>Middleware is configured for MVC SPA with Authentication</h4>
+        <h4>Application consists of controllers and services</h4>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="this.slideNumber == 3">
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-responsive prettyimage" (click)="showSlide(1)" src="../../../assets/Images/server side overview.png">
+      </div>
+      <div class="col-lg-6">
+        <h3>ASP.NET Core Server </h3>
+        <h4>Working Solution provided by template</h4>
+        <h4>Program.cs</h4>
+        <h5>Configures logging</h5>
+        <h5>Creates the Web host based on Startup.cs</h5>
+        <h4>Startup.cs</h4>
+        <h5>Configure() - Configures the request pipeline middleware</h5>
+        <h5>ConfigureServices() - Configures the services available to the controllers</h5>
+        <h4>Controllers</h4>
+        <h5>Every request is handled by constructing a controller</h5>
+        <h4>Custom Services</h4>
+        <h5>Scoped, Transient, Singleton</h5>
+        <h5>Injected into Controllers on construction</h5>
+        <h4>IDataCenterLib Implementations</h4>
+        <h5>DataCenterLive - talks to iC Data Center</h5>
+        <h5>DataCenterSimulated - simulates iC Data Center</h5>
 
-  <h3>Front End (Angular)</h3>
+      </div>
+    </div>
+  </div>
 
-  <h4>Styling</h4>
-  <h4>Responsive UI</h4>
-  <h4>Drag And Drop</h4>
-  <h4>Dashboard Page</h4>
-  <h4>Security</h4>
-  <h4>Search</h4>
-  <h4>SVG</h4>
 </div>
+

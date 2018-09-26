@@ -7,5 +7,13 @@ import { Component } from "@angular/core";
 })
 
 export class SlideAngularComponent {
+  slideNumber: number = 1;
+
+  constructor() {
+  }
+
+  showSlide(index: number) {
+    this.slideNumber = index;
+  }
 
 }

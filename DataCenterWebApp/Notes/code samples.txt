@@ -1,0 +1,7 @@
+﻿<h1>{{title}}<h1>
+
+<h1 [style.color]="color">This is red</h1>
+
+<button (click)="showSlide(1)">Show Slide 1 </button>
+
+<input type="text" [(ngModel)]="title" />
