@@ -41,6 +41,8 @@ import { SlideDemoComponent } from './about/slide-demo/slide-demo.component';
 import { SlideServerSideComponent } from './about/slide-server-side/slide-server-side.component';
 import { SlideAngularComponent } from './about/slide-angular/slide-angular.component';
 import { SlideSummaryComponent } from './about/slide-summary/slide-summary.component';
+import { Demo1Component } from './about/demo-1/demo-1.component';
+import { Demo2Component } from './about/demo-2/demo-2.component';
 
 
 
@@ -72,7 +74,9 @@ import { SlideSummaryComponent } from './about/slide-summary/slide-summary.compo
     SlideDemoComponent,
     SlideServerSideComponent,
     SlideAngularComponent,
-    SlideSummaryComponent
+    SlideSummaryComponent,
+    Demo1Component,
+    Demo2Component
 
   ],
   imports: [

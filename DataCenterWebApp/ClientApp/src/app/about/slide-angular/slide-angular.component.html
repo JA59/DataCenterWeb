@@ -7,36 +7,47 @@
     <h4>History</h4>
     <table class="table table-bordered" style="width:300px; margin-left:60px;">
       <tr><td>AngularJS</td><td>October, 2010</td></tr>
-      <tr><td>Angular 2.0</td><td>May,2016 (complete rewrite)</td></tr>
-      <tr><td>Angular 4.0</td><td>March,2017</td></tr>
+      <tr><td>Angular 2.0</td><td>May, 2016 (complete rewrite)</td></tr>
+      <tr><td>Angular 4.0</td><td>March, 2017</td></tr>
       <tr><td>Angular 5.0</td><td>November, 2017 (dotnet default)</td></tr>
       <tr><td>Angular 6.0</td><td>May, 2018</td><td></td></tr>
       <tr><td>Angular 7.0</td><td>October, 2018</td></tr>
     </table>
   </div>
-  <div *ngIf="this.slideNumber == 2" (click)="showSlide(2)">
-    <h3>Angular Modules implement components and Services</h3>
-    <div class="row">
-      <div class="col-lg-6">
-        <h4>Components</h4>
-        <h5>Combines Typescript, HTML, and CSS</h5>
-        <h5>Data binding between Typescript and HTML</h5>
-        <h6>Interpolation</h6>
-        <kbd>&lt;h1&gt;&#123;&#123; title &#125;&#125;&lt;/h1&gt;</kbd>
-        <h6>One Way Binding</h6>
-        <h6>Event Binding</h6>
-        <h6>Two Way binding</h6>
+  <div *ngIf="this.slideNumber == 2">
+    <demo-1 [name]="myName"></demo-1>
+    <div class="row" (click)="showSlide(3)">
+      <div class="col-lg-7">
+        <p>demo-1.ts</p>
+        <img class="img-responsive prettyimage" src="../../../assets/Images/demo1ts.png">
+        <p>demo-1.html</p>
+        <img class="img-responsive prettyimage" src="../../../assets/Images/demo1html.png">
       </div>
-      <div class="col-lg-6">
-        <h3>Server conforms to OWIN Standard</h3>
-        <h4>Application is hosted by dotnet.exe oo IIS</h4>
-        <h4>Kestrel is the web server created for ASP.NET Core</h4>
-        <h4>Middleware is configured for MVC SPA with Authentication</h4>
-        <h4>Application consists of controllers and services</h4>
+      <div class="col-lg-5">
+        <p>demo-1.css</p>
+        <img class="img-responsive prettyimage" src="../../../assets/Images/demo1css.png">
+        <p>Using the component</p>
+        <img class="img-responsive prettyimage" src="../../../assets/Images/usedemo1.png">
+
       </div>
+
     </div>
   </div>
   <div *ngIf="this.slideNumber == 3">
+    <demo-2></demo-2>
+    <div class="row" (click)="showSlide(4)">
+      <div class="col-lg-5">
+        <p>demo-2.ts</p>
+        <img class="img-responsive prettyimage" src="../../../assets/Images/demo2ts.png">
+      </div>
+      <div class="col-lg-7">
+        <p>demo-2.html</p>
+        <img class="img-responsive prettyimage" src="../../../assets/Images/demo2html.png">
+      </div>
+
+    </div>
+  </div>
+  <div *ngIf="this.slideNumber == 4">
     <div class="row">
       <div class="col-lg-6">
         <img class="img-responsive prettyimage" (click)="showSlide(1)" src="../../../assets/Images/server side overview.png">
