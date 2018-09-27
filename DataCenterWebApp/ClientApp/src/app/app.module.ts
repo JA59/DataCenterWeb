@@ -6,7 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AuthService } from './services/auth.service';
 import { AuthInterceptor } from './services/auth.interceptor';
-import { CounterService } from './services/counter.service';
+import { ExperimentCountService } from './services/experimentcount.service';
 import { DragService } from './services/drag.service';
 import { SystemOverviewService } from './services/systemoverview.service';
 import { PageService } from './services/page.service';
@@ -43,6 +43,7 @@ import { SlideAngularComponent } from './about/slide-angular/slide-angular.compo
 import { SlideSummaryComponent } from './about/slide-summary/slide-summary.component';
 import { Demo1Component } from './about/demo-1/demo-1.component';
 import { Demo2Component } from './about/demo-2/demo-2.component';
+import { Demo3Component } from './about/demo-3/demo-3.component';
 
 
 
@@ -76,7 +77,8 @@ import { Demo2Component } from './about/demo-2/demo-2.component';
     SlideAngularComponent,
     SlideSummaryComponent,
     Demo1Component,
-    Demo2Component
+    Demo2Component,
+    Demo3Component
 
   ],
   imports: [
@@ -98,7 +100,7 @@ import { Demo2Component } from './about/demo-2/demo-2.component';
   ],
   providers: [
     AuthService,
-    CounterService,
+    ExperimentCountService,
     DragService,
     SystemOverviewService,
     PageService,

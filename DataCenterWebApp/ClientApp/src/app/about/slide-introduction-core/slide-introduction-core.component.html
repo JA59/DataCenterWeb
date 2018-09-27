@@ -22,7 +22,7 @@
       <img class="img-responsive prettyimage" src="../../../assets/Images/owin.png">
     </div>
   </div>-->
-  <div *ngIf="this.slideNumber == 1">
+  <div *ngIf="this.slideNumber == 1" (click)="showSlide(2)">
     <h4>MVC ASP.NET Core 2.1 SPA Architecture</h4>
     <h5>User navigates to home page; Kestrel server constructs home controller.</h5>
     <h5>Home controller returns entire application.</h5>
@@ -30,12 +30,12 @@
     <img class="img-responsive prettyimage" src="../../../assets/Images/SPA ASP.NET Core MVC.png">
   </div>
 
-  <div *ngIf="this.slideNumber == 2">
+  <div *ngIf="this.slideNumber == 2" (click)="showSlide(3)">
     <h4>Razor engine (for traditional MVC page based application)</h4>
     <h5>C# code embedded with HTML in cshtml file.</h5>
     <img class="img-responsive prettyimage" src="../../../assets/Images/razor.png">
   </div>
-  <div *ngIf="this.slideNumber == 3">
+  <div *ngIf="this.slideNumber == 3" (click)="showSlide(4)">
     <h4>Razor example</h4>
     <h5>Razor is not a programming language. It's a server side markup language.</h5>
     <h5>
@@ -43,7 +43,7 @@
     </h5>
     <img class="img-responsive prettyimage" src="../../../assets/Images/razor example.png">
   </div>
-  <div *ngIf="this.slideNumber == 4">
+  <div *ngIf="this.slideNumber == 4" (click)="showSlide(1)">
     <h4>Theoretical iC Data Center with Angular Front End</h4>
     <img class="img-responsive prettyimage" src="../../../assets/Images/Silverlight replacement.png">
   </div>

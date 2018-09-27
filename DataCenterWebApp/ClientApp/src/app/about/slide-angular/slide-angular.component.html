@@ -47,32 +47,23 @@
 
     </div>
   </div>
-  <div *ngIf="this.slideNumber == 4">
-    <div class="row">
-      <div class="col-lg-6">
-        <img class="img-responsive prettyimage" (click)="showSlide(1)" src="../../../assets/Images/server side overview.png">
+  <div *ngIf="this.slideNumber == 4" (click)="showSlide(5)">
+    <img class="img-responsive prettyimage" src="../../../assets/Images/experimentcounterservice.png">
+  </div>
+  <div *ngIf="this.slideNumber == 5">
+    <demo-3></demo-3>
+    <div class="row" (click)="showSlide(1)">
+      <div class="col-lg-9">
+        <p>demo-3.ts</p>
+        <img class="img-responsive prettyimage" src="../../../assets/Images/demo3ts.png">
+        <img class="img-responsive prettyimage" src="../../../assets/Images/demo3html.png">
       </div>
-      <div class="col-lg-6">
-        <h3>ASP.NET Core Server </h3>
-        <h4>Working Solution provided by template</h4>
-        <h4>Program.cs</h4>
-        <h5>Configures logging</h5>
-        <h5>Creates the Web host based on Startup.cs</h5>
-        <h4>Startup.cs</h4>
-        <h5>Configure() - Configures the request pipeline middleware</h5>
-        <h5>ConfigureServices() - Configures the services available to the controllers</h5>
-        <h4>Controllers</h4>
-        <h5>Every request is handled by constructing a controller</h5>
-        <h4>Custom Services</h4>
-        <h5>Scoped, Transient, Singleton</h5>
-        <h5>Injected into Controllers on construction</h5>
-        <h4>IDataCenterLib Implementations</h4>
-        <h5>DataCenterLive - talks to iC Data Center</h5>
-        <h5>DataCenterSimulated - simulates iC Data Center</h5>
+      <div class="col-lg-3">
+        <p>demo-3.html</p>
+        <img class="img-responsive prettyimage" src="../../../assets/Images/demo3css.png">
+      </div>
 
-      </div>
     </div>
   </div>
-
 </div>
 

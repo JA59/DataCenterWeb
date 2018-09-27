@@ -5,6 +5,12 @@
   margin-left: 5px;
 }
 
+.warningClass {
+  font-size: 18px;
+  color: red;
+  margin-left: 5px;
+}
+
 .demoClass { 
   background-color: lightblue;
 }

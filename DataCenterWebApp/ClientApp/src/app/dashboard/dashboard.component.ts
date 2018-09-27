@@ -1,12 +1,8 @@
 import { Component, Inject, Input, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy, HostListener } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { Router } from '@angular/router';
-import { CounterService } from '../services/counter.service';
-import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { ISystemOverview } from '../interfaces/isystemoverview';
 import { SystemOverviewService } from '../services/systemoverview.service';
-import { $ } from 'protractor';
 
 //
 // dashboard component

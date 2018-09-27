@@ -1,0 +1,18 @@
+
+<div class="demoClass">
+  <div class="row" *ngIf="this.currentCount >= 0">
+    <p class="myClass col-lg-6"
+       [ngClass]="{'warningClass': currentCount < 100}">
+       There are {{currentCount}} experiments.
+    </p>
+  </div>
+  <div class="row" *ngIf="this.currentCount < 0">
+    <p class="myClass col-lg-6">Waiting for ExperimentCount service.</p>
+  </div>
+</div>
+
+
+
+
+
+

@@ -1,9 +1,9 @@
 <div class="container-fluid">
 
-  <div *ngIf="this.slideNumber == 1">
+  <div *ngIf="this.slideNumber == 1" (click)="showSlide(2)">
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-responsive prettyimage" (click)="showSlide(2)" src="../../../assets/Images/cover.jpg">
+        <img class="img-responsive prettyimage"  src="../../../assets/Images/cover.jpg">
       </div>
       <div class="col-lg-6">
         <h3>SilverLight is Dying </h3>
@@ -16,10 +16,10 @@
       </div>
     </div>
   </div>
-  <div *ngIf="this.slideNumber == 2">
+  <div *ngIf="this.slideNumber == 2" (click)="showSlide(3)">
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-responsive bookimage" (click)="showSlide(3)" src="../../../assets/Images/current.png">
+        <img class="img-responsive bookimage"  src="../../../assets/Images/current.png">
       </div>
       <div class="col-lg-6">
         <h3>Client is downloaded from server</h3>
@@ -29,10 +29,10 @@
       </div>
     </div>
   </div>
-  <div *ngIf="this.slideNumber == 3">
+  <div *ngIf="this.slideNumber == 3" (click)="showSlide(4)">
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-responsive bookimage" (click)="showSlide(4)" src="../../../assets/Images/wpf.png">
+        <img class="img-responsive bookimage"  src="../../../assets/Images/wpf.png">
       </div>
       <div class="col-lg-6">
         <h3>WPF based client</h3>
@@ -45,15 +45,13 @@
       </div>
     </div>
   </div>
-  <div *ngIf="this.slideNumber == 4">
+  <div *ngIf="this.slideNumber == 4" (click)="showSlide(1)" >
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-responsive bookimage" (click)="showSlide(1)" src="../../../assets/Images/angular.png">
+        <img class="img-responsive bookimage" src="../../../assets/Images/angular.png">
       </div>
       <div class="col-lg-6">
         <h3>ASP.NET Core / Angular</h3>
-        <h4>Cross Platform</h4>
-          <h5>Windows, Azure, Windows IoT Core</h5>
         <h4>Many New Technologies</h4>
         <h5>.NET Core</h5>
         <h5>ASP.NET Core</h5>

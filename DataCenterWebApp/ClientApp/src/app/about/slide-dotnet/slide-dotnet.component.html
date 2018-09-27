@@ -2,16 +2,16 @@
 
   <h3>.Net Platforms</h3>
 
-  <div *ngIf="this.slideNumber == 1">
-    <img class="img-responsive prettyimage" (click)="showSlide(2)" src="../../../assets/Images/dotnet frameworks 1.png">
+  <div *ngIf="this.slideNumber == 1" (click)="showSlide(2)">
+    <img class="img-responsive prettyimage"  src="../../../assets/Images/dotnet frameworks 1.png">
   </div>
-  <div *ngIf="this.slideNumber == 2">
-    <img class="img-responsive prettyimage" (click)="showSlide(3)" src="../../../assets/Images/dotnet frameworks 2.png">
+  <div *ngIf="this.slideNumber == 2" (click)="showSlide(3)" >
+    <img class="img-responsive prettyimage" src="../../../assets/Images/dotnet frameworks 2.png">
   </div>
-  <div *ngIf="this.slideNumber == 3">
+  <div *ngIf="this.slideNumber == 3" (click)="showSlide(1)" >
     <div class="row">
       <div class="col-lg-6">
-    <img class="img-responsive prettyimage" (click)="showSlide(1)" src="../../../assets/Images/core.png">
+    <img class="img-responsive prettyimage" src="../../../assets/Images/core.png">
       </div>
       <div class="col-lg-6">
     <h4>.NET Core (2.1)</h4>

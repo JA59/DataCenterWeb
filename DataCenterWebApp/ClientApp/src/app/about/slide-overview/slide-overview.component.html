@@ -13,20 +13,20 @@
   </nav>
 
     <div style="margin-top: 15px; margin-left: 30px;">
-      <div *ngIf="this.slideNumber == 1">
+      <div *ngIf="this.slideNumber == 1" (click)="showSlide(2)">
         <h4>StepStone ELN Experiments</h4>
         <h5>Current implementation has no capability to search, preview or delete ELN Experiments.</h5>
         <h5>Ideal target for exploring ASP.NET Core MVC SPA Angular.</h5>
         <img class="img-responsive prettyimage" src="../../../assets/Images/stepstone.png">
       </div>
-      <div *ngIf="this.slideNumber == 2">
+      <div *ngIf="this.slideNumber == 2" (click)="showSlide(3)">
         <h4>ASP.NET Core 2.1 MVC Angular Project Template</h4>
         <h5>Use dotnet CLI to create a new project </h5>
         <h6><kbd>dotnet new angular</kbd></h6>
         <h5>Build and run from Visual Studio 2017</h5>
         <img class="img-responsive prettyimage" src="../../../assets/Images/sample overview.png">
       </div>
-      <div *ngIf="this.slideNumber == 3">
+      <div *ngIf="this.slideNumber == 3" (click)="showSlide(1)">
         <h4>iC Data Center Web</h4>
         <h5>Provide a list of planned experiments.</h5>
         <h5>Provide a detailed view of an ELN Experiment.</h5>
