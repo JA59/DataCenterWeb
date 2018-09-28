@@ -1,10 +1,9 @@
 
 .myClass {
   font-size: 18px;
-  color: black;
   margin-left: 5px;
 }
 
-.demoClass { 
-  background-color: lightblue;
+.demoClass {
+  margin-top: 3px;
 }

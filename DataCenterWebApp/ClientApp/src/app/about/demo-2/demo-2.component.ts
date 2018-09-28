@@ -1,4 +1,5 @@
 /* tslint:disable */
+
 import { Component} from '@angular/core';
 
 @Component({
@@ -8,6 +9,7 @@ import { Component} from '@angular/core';
 })
 
 export class Demo2Component {
+  public selectedName = "";
   public names: string[];
 
   constructor() {
@@ -16,6 +18,10 @@ export class Demo2Component {
     this.names[1] = "SomeAdmin";
     this.names[2] = "Joe";
     this.names[3] = "Ed"; 
+  }
+
+  setSelectedName(name: string) {
+    this.selectedName = name;
   }
 }
 

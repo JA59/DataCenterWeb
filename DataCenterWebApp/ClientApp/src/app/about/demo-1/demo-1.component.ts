@@ -1,5 +1,6 @@
 /* tslint:disable */
-import { Component, Input } from '@angular/core';
+
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'demo-1',
@@ -9,12 +10,17 @@ import { Component, Input } from '@angular/core';
 
 export class Demo1Component {
   @Input('name') myName: string;
+  @Output() selectEvent = new EventEmitter();
 
   constructor() {
   }
 
   setName(val: string) {
     this.myName = val;
+  }
+
+  itemSelected() {
+    this.selectEvent.emit(this.myName);
   }
 }
 

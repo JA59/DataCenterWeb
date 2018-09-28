@@ -1,6 +1,9 @@
 
 <div class="demoClass">
-  <demo-1 *ngFor="let myName of names" [name]="myName"></demo-1>
+  <p class="myClass">Selected name is {{selectedName}}</p>
+  <demo-1 *ngFor="let myName of names" [name]="myName"
+          (selectEvent)='setSelectedName($event)'>
+  </demo-1>
 </div>
 
 

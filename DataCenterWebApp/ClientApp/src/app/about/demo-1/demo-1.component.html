@@ -1,10 +1,15 @@
 
-<div class="demoClass">
-  <div class="row">
-    <p class="myClass col-lg-3">The name is {{myName}}</p>
-    <p class="myClass col-lg-3"><input [(ngModel)]="myName"></p>
-    <p class="myClass col-lg-3">
-      <a (click)="setName('Roger')">Set name to Roger</a>
+<div>
+  <div class="row demoClass">
+    <button class="btn btn-primary btn-sm col-lg-2 myClass"
+            (click)='itemSelected()'>Select {{myName}}
+    </button>
+    <p class="col-lg-3" style="top:8px;">
+      <input [(ngModel)]="myName">
+    </p>
+    <p class="col-lg-3" style="top:10px;">
+      <a class="aClass" (click)="setName('Roger')">
+        Set name to Roger</a>
     </p>
   </div>
 </div>
