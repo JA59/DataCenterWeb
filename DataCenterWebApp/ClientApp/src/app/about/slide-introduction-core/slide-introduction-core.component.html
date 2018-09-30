@@ -22,13 +22,13 @@
       <img class="img-responsive prettyimage" src="../../../assets/Images/owin.png">
     </div>
   </div>-->
-  <div *ngIf="this.slideNumber == 1" (click)="showSlide(2)">
-    <h4>MVC ASP.NET Core 2.1 SPA Architecture</h4>
-    <h5>User navigates to home page; Kestrel server constructs home controller.</h5>
-    <h5>Home controller returns entire application.</h5>
-    <h5>Controllers are constructed as needed to handle requests from the browser.</h5>
-    <img class="img-responsive prettyimage" src="../../../assets/Images/SPA ASP.NET Core MVC.png">
-  </div>
+    <div *ngIf="this.slideNumber == 1" (click)="showSlide(2)">
+      <h4>MVC ASP.NET Core 2.1 SPA Architecture</h4>
+      <h5>User navigates to home page; Kestrel server constructs home controller.</h5>
+      <h5>Controllers are constructed as needed to handle requests from the browser.</h5>
+      <h5>Services are injected into controllers when constructed.</h5>
+      <img class="img-responsive prettyimage" src="../../../assets/Images/SPA ASP.NET Core MVC.png">
+    </div>
 
   <div *ngIf="this.slideNumber == 2" (click)="showSlide(3)">
     <h4>Razor engine (for traditional MVC page based application)</h4>

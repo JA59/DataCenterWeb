@@ -1,29 +1,32 @@
 <div class="container-fluid">
 
-  <h3>.Net Platforms</h3>
+
 
   <div *ngIf="this.slideNumber == 1" (click)="showSlide(2)">
-    <img class="img-responsive prettyimage"  src="../../../assets/Images/dotnet frameworks 1.png">
+    <h2>.NET Framework versus .NET Core</h2>
+    <img class="img-responsive prettyimage" src="../../../assets/Images/dotnet frameworks 1.png">
   </div>
-  <div *ngIf="this.slideNumber == 2" (click)="showSlide(3)" >
+  <div *ngIf="this.slideNumber == 2" (click)="showSlide(3)">
+    <h2>ASP.NET Core Apps are .NET Core Apps</h2>
     <img class="img-responsive prettyimage" src="../../../assets/Images/dotnet frameworks 2.png">
   </div>
-  <div *ngIf="this.slideNumber == 3" (click)="showSlide(1)" >
+  <div *ngIf="this.slideNumber == 3" (click)="showSlide(1)">
+    <h2>.NET Core Runtime</h2>
     <div class="row">
       <div class="col-lg-6">
-    <img class="img-responsive prettyimage" src="../../../assets/Images/core.png">
+        <img class="img-responsive prettyimage" src="../../../assets/Images/core.png">
       </div>
       <div class="col-lg-6">
-    <h4>.NET Core (2.1)</h4>
-    <h5>Cross platform (Windows, Mac, Linux)</h5>
-    <h5>Open source (GitHub)</h5>
-    <h5>Implementation of .NET Standard</h5>
-    <h4>Deployment Models</h4>
-    <h5>Framework dependent (FDD)</h5>
+        <h4>.NET Core (2.1)</h4>
+        <h5>Cross platform (Windows, Mac, Linux)</h5>
+        <h5>Open source (GitHub)</h5>
+        <h5>Implementation of .NET Standard</h5>
+        <h4>Deployment Models</h4>
+        <h5>Framework dependent (FDD)</h5>
         <h6>.NET Core 2.1 installed</h6>
         <h6>dotnet.exe hosts app</h6>
         <h6>platform independent</h6>
-    <h5>self contained (SCD)</h5>
+        <h5>self contained (SCD)</h5>
         <h6>targets a platform</h6>
         <h6>executable in native format</h6>
       </div>
