@@ -28,12 +28,9 @@ kbd {
 }
 
 .bookimage {
-  width: 404px;
-  height: 550px;
+  height: 300px;
   padding: 5px;
   margin-top: 15px;
   margin-bottom: 5px;
-  background-color: #ffea2e;
-  border: 5px solid white;
 }
 

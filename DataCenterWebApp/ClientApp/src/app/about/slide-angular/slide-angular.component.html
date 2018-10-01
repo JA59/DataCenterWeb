@@ -5,18 +5,39 @@
     <h5>Supported by modern browsers (Edge, Chrome, Firefox, Safari)</h5>
     <h6>"polyfils" are needed for IE 9, 10, 11</h6>
     <h4>History</h4>
-    <table class="table table-bordered" style="width:300px; margin-left:60px;">
-      <tr><td>AngularJS</td><td>October, 2010</td></tr>
-      <tr><td>Angular 2.0</td><td>May, 2016 (complete rewrite)</td></tr>
-      <tr><td>Angular 4.0</td><td>March, 2017</td></tr>
-      <tr><td>Angular 5.0</td><td>November, 2017 (dotnet default)</td></tr>
-      <tr><td>Angular 6.0</td><td>May, 2018</td><td></td></tr>
-      <tr><td>Angular 7.0</td><td>October, 2018</td></tr>
-    </table>
+      <table class="table table-bordered" style="width:600px; margin-left:60px; font-size: 16px">
+        <tr><td>AngularJS</td><td>October, 2010</td></tr>
+        <tr><td>Angular 2.0</td><td>May, 2016 (complete rewrite)</td></tr>
+        <tr><td>Angular 4.0</td><td>March, 2017</td></tr>
+        <tr><td>Angular 5.0</td><td>November, 2017 (dotnet default)</td></tr>
+        <tr><td>Angular 6.0</td><td>May, 2018</td><td></td></tr>
+        <tr><td>Angular 7.0</td><td>October, 2018</td></tr>
+      </table>
   </div>
-  <div *ngIf="this.slideNumber == 2">
+  <div *ngIf="this.slideNumber == 2" (click)="showSlide(3)">
+    <h3>Architecture Overview</h3>
+    <h4>NgModules</h4>
+      <h5>Collection of related Components, Services, Directives and Pipes</h5>
+    <h4>Components define views </h4>
+    <h5>Metadata specifies a "template" (HTML with directives)</h5>
+    <h5>Data binding between the HTML and component class</h5>
+    <h4>Services provide the functionality</h4>
+    <h5>Injected into the components when constructed</h5>
+    <h5>Built in services include http, router, timer</h5>
+    <h4>Directives </h4>
+        <h5>Structural - manipulate the elements within the DOM</h5>
+        <h5>Attribute - change the appearance or behavior of a DOM Element</h5>
+    <h4>Pipes</h4>
+        <h5>Takes in data and transforms it as output</h5>
+        <h5>Built in pipes include UpperCasePipe, DatePipe</h5>
+        <h5>Custom pipes</h5>
+        <h6>experimentfilter.pipe => experiments are filtered by search criteria</h6>
+        <h6>highlighter.pipe => string is modified to "highlight" substrings</h6>
+
+  </div>
+  <div *ngIf="this.slideNumber == 3">
     <demo-1 [name]="myName"></demo-1>
-    <div class="row" (click)="showSlide(3)">
+    <div class="row" (click)="showSlide(4)">
       <div class="col-lg-7">
         <p style="margin-top:10px;">demo-1.component.ts</p>
         <img class="img-responsive prettyimage" src="../../../assets/Images/demo1ts.png">
@@ -33,9 +54,9 @@
 
     </div>
   </div>
-  <div *ngIf="this.slideNumber == 3">
+  <div *ngIf="this.slideNumber == 4">
     <demo-2></demo-2>
-    <div class="row" (click)="showSlide(4)">
+    <div class="row" (click)="showSlide(5)">
       <div class="col-lg-5">
         <p style="margin-top:10px;">demo-2.component.ts</p>
         <img class="img-responsive prettyimage" src="../../../assets/Images/demo2ts.png">
@@ -47,13 +68,13 @@
 
     </div>
   </div>
-  <div *ngIf="this.slideNumber == 4" (click)="showSlide(5)">
+  <div *ngIf="this.slideNumber == 5" (click)="showSlide(6)">
     <p style="margin-top:10px;">experimentcount.service.ts</p>
     <img class="img-responsive prettyimage" src="../../../assets/Images/experimentcounterservice.png">
   </div>
-  <div *ngIf="this.slideNumber == 5">
+  <div *ngIf="this.slideNumber == 6">
     <demo-3></demo-3>
-    <div class="row" (click)="showSlide(1)">
+    <div class="row" (click)="showSlide(7)">
       <div class="col-lg-9">
         <p style="margin-top:10px;">demo-3.component.ts</p>
         <img class="img-responsive prettyimage" src="../../../assets/Images/demo3ts.png">

@@ -2,35 +2,42 @@
 
   <div *ngIf="this.slideNumber == 1" (click)="showSlide(2)">
     <div class="row">
-      <div class="col-lg-6">
-        <img class="img-responsive prettyimage"  src="../../../assets/Images/cover.jpg">
+      <div class="col-lg-3">
+        <img class="img-responsive bookimage"  src="../../../assets/Images/book3.jpg">
+        <img class="img-responsive bookimage"  src="../../../assets/Images/book1.jpg">
+      </div>
+      <div class="col-lg-3">
+        <img class="img-responsive bookimage"  src="../../../assets/Images/book2.jpg">
       </div>
       <div class="col-lg-6">
-        <h2>Research Project Impressions</h2>
-        <h3>There were many technologies to learn</h3>
-        <h4>.NET Core versus .NET Framework</h4>
-        <h5>Cross platform deployment</h5>
-        <h4>ASP.NET Core (Server Side framework)</h4>
-        <h5>Security tokens, configuring middleware</h5>
-        <h4>Angular (a Front End framework)</h4>
-        <h5>TypeScript, HTML5, CSS, npm</h5>
-        <h3>But they are well documented</h3>
-        <h4>Thus the "I can code it all by myself" logo</h4>
-        <h5>With a few good books and mostly Google</h5>
-        <h3>In a familiar environment</h3>
-        <h4>Well integrated into Visual Studio 2017</h4>
-        <h4>Server side is C#</h4>
-        <h3>And highly relevant</h3>
+        <h2>A "learn-n-share" production</h2>
+        <h3>.NET Core versus .NET Framework</h3>
+        <h4>Build-Publish-Run</h4>
+        <h5>Framework Dependent or Self Contained Deployment</h5>
+        <h5>Windows Service, Azure Cloud Service, Windows IoT Core</h5>
+        <h3>ASP.NET Core</h3>
+        <h4>Model-View-Controller Architecture</h4>
+        <h5>Single Page Applications</h5>
+        <h5>Razor Pages</h5>
+        <h3>A Live Demo</h3>
+        <h4>iC Data Center Web</h4>
+        <h5>View and Manage StepStone ELN Experiments</h5>
+        <h3>Angular</h3>
+        <h4>Developing Components and Services</h4>
+        <h5>Data Binding, Directives, Pipes</h5>
+        <h5>TypeScript, HTML5, CSS</h5>
+
       </div>
     </div>
   </div>
+
   <div *ngIf="this.slideNumber == 2" (click)="showSlide(3)">
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-responsive bookimage"  src="../../../assets/Images/current.png">
+        <img class="img-responsive prettyimage"  src="../../../assets/Images/current.png">
       </div>
       <div class="col-lg-6">
-        <h2>The Problem We Face</h2>
+        <h2>Why ASP.NET Core and Angular?</h2>
         <h3>SilverLight is a dead end</h3>
             <h5>In 2013, Microsoft announced that they had ceased development of Silverlight except for patches and bugfixes</h5>
           <h4>Chrome dropped support in September, 2015</h4>
@@ -38,7 +45,7 @@
           <h4>Microsoft Edge never supported it</h4>
           <h4>Internet Explorer 11</h4>
             <h5>End of Life, October 2021</h5>
-        <h3>But it was a great fit for iC Data Center</h3>
+        <h3>But it was a great model for iC Data Center</h3>
           <h4>No client installation required</h4>
           <h4>No chance of a version mismatch</h4>
       </div>
@@ -47,7 +54,7 @@
   <div *ngIf="this.slideNumber == 3" (click)="showSlide(4)">
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-responsive bookimage"  src="../../../assets/Images/wpf.png">
+        <img class="img-responsive prettyimage"  src="../../../assets/Images/wpf.png">
       </div>
       <div class="col-lg-6">
         <h2>Alternative to web based client</h2>
@@ -64,7 +71,7 @@
   <div *ngIf="this.slideNumber == 4" (click)="showSlide(1)" >
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-responsive bookimage" src="../../../assets/Images/angular.png">
+        <img class="img-responsive prettyimage" src="../../../assets/Images/angular.png">
       </div>
       <div class="col-lg-6">
         <h2>iC Data Center Client Replacement</h2>
